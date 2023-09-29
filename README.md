@@ -16,3 +16,7 @@ install all the dependencies/modules
 ### `npm start`
 
 Launches the app
+
+
+#### Author
+Yanchun Wang
