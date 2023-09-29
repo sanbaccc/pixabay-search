@@ -44,10 +44,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 class SearchBar extends React.Component {
   state = {
-    searchValue: "",
-    results: [],
-    total: 0,
-    currentPage: 1,
+    searchValue: "",    // input value that user enter to search bar
+    results: [],        // data returned by pixabay API
+    total: 0,           // total hits
+    currentPage: 1,     // current page number, default: 1
   };
 
   inputHandler = (e) => {
@@ -68,6 +68,7 @@ class SearchBar extends React.Component {
       );
   };
 
+  // adding support to detect if enter key is pressed 
   keyListener = (e) => {
     if (e.key === "Enter") {
       this.searchHandler();
